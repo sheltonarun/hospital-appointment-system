@@ -7,7 +7,8 @@ export default function Login({ onLoginSuccess }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/login", form);
+      // 🔗 Use your live backend URL here (Render backend)
+      await axios.post("https://hospital-backend-veyr.onrender.com/login", form);
       alert("Login successful!");
       onLoginSuccess(form.username);
     } catch (err) {
